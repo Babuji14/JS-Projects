@@ -13,7 +13,7 @@ function generator() {
     codel.forEach((codeelement) => {
         const newcolorcode = randomColor();
         codeelement.style.backgroundColor = "#" + newcolorcode;
-        codeelement.innerText = "#" + newcolorcode;
+        codeelement.innerHTML = `<span class="color-code">#${newcolorcode}</span> <i class="fa-regular fa-copy"></i>`;
     });
 }
 
