@@ -3,7 +3,7 @@ const btn=document.querySelector(".btn");
 
 
 btn.addEventListener("click", ()=>{
-    images=2;
+    images=2;/*We can modify the number of images that will be displayed.*/
     addNewImages();    
 });
 function addNewImages(){
