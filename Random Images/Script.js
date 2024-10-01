@@ -1,15 +1,35 @@
-const imagecontainer=document.querySelector(".image-container");
-const btn=document.querySelector(".btn");
+const imagecontainer = document.querySelector(".image-container");
+const btn = document.querySelector(".btn");
+const pictures = document.querySelectorAll(".pictures")
+const modelContainer = document.querySelector(".model-container");
+const modelImg = document.querySelector(".model-img");
+const closeBtn = document.querySelector(".close");
 
-
-btn.addEventListener("click", ()=>{
-    images=2;/*We can modify the number of images that will be displayed.*/
-    addNewImages();    
+btn.addEventListener("click", () => {
+    images = 2;
+    addNewImages();
 });
-function addNewImages(){
+
+function addNewImages() {
     for (let i = 0; i < images; i++) {
-        const newImages=document.createElement("img");
+        const newImages = document.createElement("img");
         newImages.src = `https://picsum.photos/300/${Math.floor(Math.random() * 2000)}`;
-        imagecontainer.appendChild(newImages);    
+        newImages.classList.add("pictures");
+        imagecontainer.appendChild(newImages);
+        
+        newImages.addEventListener("click", function () {
+            modelImg.src = newImages.src; 
+            modelContainer.classList.add("active");
+        });
     }
 }
+
+pictures.forEach((pics, i) => {
+    pics.addEventListener("click", function() {
+        modelContainer.classList.add("active");
+    });
+});
+
+closeBtn.addEventListener("click", function () {
+    modelContainer.classList.remove("active");
+});
