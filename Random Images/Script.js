@@ -4,6 +4,7 @@ const pictures = document.querySelectorAll(".pictures")
 const modelContainer = document.querySelector(".model-container");
 const modelImg = document.querySelector(".model-img");
 const closeBtn = document.querySelector(".close");
+let index=0;
 
 btn.addEventListener("click", () => {
     images = 2;
@@ -27,9 +28,11 @@ function addNewImages() {
 pictures.forEach((pics, i) => {
     pics.addEventListener("click", function() {
         modelContainer.classList.add("active");
+        modelImg.src = pics.src;
     });
 });
 
 closeBtn.addEventListener("click", function () {
     modelContainer.classList.remove("active");
 });
+
