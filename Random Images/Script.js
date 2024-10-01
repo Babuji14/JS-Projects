@@ -14,13 +14,15 @@ btn.addEventListener("click", () => {
 function addNewImages() {
     for (let i = 0; i < images; i++) {
         const newImages = document.createElement("img");
-        newImages.src = `https://picsum.photos/300/${Math.floor(Math.random() * 2000)}`;
+        newImages.src = `https://picsum.photos/200/${Math.floor(Math.random() * 2000)}`;
+        
         newImages.classList.add("pictures");
         imagecontainer.appendChild(newImages);
-        
+
         newImages.addEventListener("click", function () {
             modelImg.src = newImages.src; 
             modelContainer.classList.add("active");
+            modelImg.style.objectFit="fill";
         });
     }
 }
