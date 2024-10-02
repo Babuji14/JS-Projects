@@ -115,4 +115,9 @@ button{
     font-family: sans-serif;
     cursor: pointer;
 }
-
+.model-container{
+    display: none;
+}
+.model-container.active {
+    display: block; 
+}
