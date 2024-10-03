@@ -75,7 +75,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 50%;
     height: 60%;
     position: relative;
@@ -98,6 +98,21 @@ body{
     justify-content: space-between;
     position: absolute;
     top: 160px;
+}
+.download{
+    align-self: flex-start;
+    margin: 20px 0px;
+    border: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+.download:hover{
+    background-color: #fff;
+}
+.download a button{
+    font-size: 18px;
+}.download a button:hover{
+    color: #000;
 }
 button{
     background: transparent;
