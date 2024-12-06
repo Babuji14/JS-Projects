@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="start">
+        <button id="start-button">Start</button>
+    </div>
+    <div class="container">
+        <div id="quiz-container" class="quiz-container">
+            <div class="screening">
+                <div id="quesion-count">1 of 2 Questions</div>
+                <div id="timer">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <span id="time-left">10s</span>
+                </div>
+            </div>
+            <div id="questions-container">
+                
+            </div>
+            <div class="next-button">
+                <button id="next-button">Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="score-container">
+        <div id="user-score">score</div>
+            <button id="restart-button">Restart</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
