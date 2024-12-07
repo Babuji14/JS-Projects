@@ -32,7 +32,7 @@ button#start-button:hover, button#restart-button:hover {
     display: none;
 }
 .quiz-container{
-    min-width: 450px;
+    min-width: 460px;
     background-color: #fff;
     padding:30px 30px 100px;
     border-radius: 5px;
@@ -59,7 +59,18 @@ button#start-button:hover, button#restart-button:hover {
     justify-content: space-around;
     font-size: 14px;
 }
-button#next-button{
+@keyframes timerBlink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.13);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.next-button button{
     all: unset;
     padding: 10px 25px;
     background-color: #0CABA8;
@@ -68,9 +79,13 @@ button#next-button{
     cursor: pointer;
     float: right;
     margin-top: 30px;
+    display: flex;
 }
 #questions-container{
-    margin-top: 20px;
+    margin: 20px 0;
+}
+.questions{
+    margin-bottom: 10px;
 }
 button.option_button{
     all: unset;
@@ -87,3 +102,7 @@ button.option_button{
 button.option_button:hover{
     transform: scale(1.03);
 }
+#timer{
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+  
